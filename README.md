@@ -1,10 +1,13 @@
 
 <div align="center">
-### BlaZe
+
+BlaZe
+
 Advanced Discord Music Bot
 
-A powerful, modular and feature-rich Discord music bot built for communities that demand reliable music playback, advanced player controls and a smooth listening experience.
+A powerful, modular, and feature-rich Discord music bot designed to deliver reliable music playback, seamless audio streaming, advanced player controls, and an enhanced listening experience for Discord communities.
 
+</div>
 <p>
   <img src="https://img.shields.io/badge/Node.js-20%2B-339933?style=for-the-badge&logo=nodedotjs&logoColor=white">
   <img src="https://img.shields.io/badge/Discord.js-v14-5865F2?style=for-the-badge&logo=discord&logoColor=white">
