@@ -1,7 +1,7 @@
 
 <div align="center">
 
-## BlaZe
+## BlaZe™
 
 Advanced Discord Music Bot
 
