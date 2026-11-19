@@ -1,7 +1,7 @@
 
 <div align="center">
-
-### Advanced Discord Music Bot
+### BlaZe
+Advanced Discord Music Bot
 
 A powerful, modular and feature-rich Discord music bot built for communities that demand reliable music playback, advanced player controls and a smooth listening experience.
 
