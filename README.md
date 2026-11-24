@@ -1,23 +1,51 @@
-
+```html
 <div align="center">
 
-## BlaZe™
+<img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=2000&q=95" width="100%" alt="Music atmosphere">
 
-Advanced Discord Music Bot
+<br><br>
 
-A powerful, modular, and feature-rich Discord music bot designed to deliver reliable music playback, seamless audio streaming, advanced player controls, and an enhanced listening experience for Discord communities.
+<img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=800&size=32&duration=2500&pause=800&color=9B6DFF&center=true&vCenter=true&width=850&lines=NEXT+GENERATION+AUDIO;ENGINEERED+FOR+PERFORMANCE;POWERED+BY+INNOVATION;BUILT+FOR+COMMUNITIES" alt="Animated title">
 
-</div>
-<p>
-  <img src="https://img.shields.io/badge/Node.js-20%2B-339933?style=for-the-badge&logo=nodedotjs&logoColor=white">
-  <img src="https://img.shields.io/badge/Discord.js-v14-5865F2?style=for-the-badge&logo=discord&logoColor=white">
-  <img src="https://img.shields.io/badge/Kazagumo-Lavalink-7C3AED?style=for-the-badge">
-  <img src="https://img.shields.io/badge/Shoukaku-Audio%20Manager-8B5CF6?style=for-the-badge">
-  <img src="https://img.shields.io/badge/MongoDB-Database-47A248?style=for-the-badge&logo=mongodb&logoColor=white">
-  <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge">
-</p>
+<br>
 
-**Music. Performance. Reliability.**
+<img src="https://img.shields.io/badge/NODE.JS-20%2B-339933?style=for-the-badge&logo=nodedotjs&logoColor=white">
+<img src="https://img.shields.io/badge/DISCORD.JS-V14-5865F2?style=for-the-badge&logo=discord&logoColor=white">
+<img src="https://img.shields.io/badge/JAVASCRIPT-ES2022-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
+<img src="https://img.shields.io/badge/KAZAGUMO-MUSIC-8B5CF6?style=for-the-badge">
+<img src="https://img.shields.io/badge/SHOUKAKU-LAVALINK-7C3AED?style=for-the-badge">
+<img src="https://img.shields.io/badge/LAVALINK-V4-9146FF?style=for-the-badge">
+<img src="https://img.shields.io/badge/MONGODB-DATABASE-47A248?style=for-the-badge&logo=mongodb&logoColor=white">
+
+<br><br>
+
+<a href="https://github.com/fraudelis/blaze/stargazers">
+<img src="https://img.shields.io/github/stars/fraudelis/blaze?style=for-the-badge&logo=github&color=yellow">
+</a>
+<a href="https://github.com/fraudelis/blaze/forks">
+<img src="https://img.shields.io/github/forks/fraudelis/blaze?style=for-the-badge&logo=github&color=blue">
+</a>
+<a href="https://github.com/fraudelis/blaze/issues">
+<img src="https://img.shields.io/github/issues/fraudelis/blaze?style=for-the-badge&logo=github&color=red">
+</a>
+<a href="https://github.com/fraudelis/blaze/commits/main">
+<img src="https://img.shields.io/github/last-commit/fraudelis/blaze?style=for-the-badge&logo=github&color=purple">
+</a>
+<a href="https://github.com/fraudelis/blaze/blob/main/LICENSE">
+<img src="https://img.shields.io/github/license/fraudelis/blaze?style=for-the-badge&color=success">
+</a>
+
+<br><br>
+
+<img src="https://skillicons.dev/icons?i=nodejs,js,mongodb,git,github,vscode&theme=dark" alt="Technology stack">
+
+<br><br>
+
+**[Repository](https://github.com/fraudelis/blaze)**
+&nbsp; • &nbsp;
+**[Issues](https://github.com/fraudelis/blaze/issues)**
+&nbsp; • &nbsp;
+**[Contributions](https://github.com/fraudelis/blaze/pulls)**
 
 </div>
 
@@ -27,24 +55,27 @@ A powerful, modular, and feature-rich Discord music bot designed to deliver reli
 
 - [Introduction](#introduction)
 - [Project Overview](#project-overview)
-- [Features](#features)
-- [Music System](#music-system)
-- [Player Controls](#player-controls)
-- [Queue Management](#queue-management)
-- [Playlist System](#playlist-system)
-- [Favourite System](#favourite-system)
-- [Audio Filters](#audio-filters)
+- [Core Infrastructure](#core-infrastructure)
 - [Music Architecture](#music-architecture)
+- [Playback Engine](#playback-engine)
+- [Queue Management](#queue-management)
+- [Interactive Controls](#interactive-controls)
+- [Audio Processing](#audio-processing)
+- [Personal Collections](#personal-collections)
+- [Playlist Management](#playlist-management)
+- [Database Infrastructure](#database-infrastructure)
 - [Technology Stack](#technology-stack)
+- [System Architecture](#system-architecture)
+- [Processing Workflow](#processing-workflow)
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Configuration](#configuration)
 - [Environment Variables](#environment-variables)
-- [Lavalink Setup](#lavalink-setup)
-- [Database Configuration](#database-configuration)
+- [Lavalink Configuration](#lavalink-configuration)
+- [Database Setup](#database-setup)
 - [Project Structure](#project-structure)
-- [Command System](#command-system)
-- [Event Handling](#event-handling)
+- [Command Architecture](#command-architecture)
+- [Event Management](#event-management)
 - [Player Lifecycle](#player-lifecycle)
 - [Error Handling](#error-handling)
 - [Performance](#performance)
@@ -55,525 +86,387 @@ A powerful, modular, and feature-rich Discord music bot designed to deliver reli
 - [Troubleshooting](#troubleshooting)
 - [Contribution Guidelines](#contribution-guidelines)
 - [License](#license)
-- [Acknowledgements](#acknowledgements)
 
 ---
 
 # Introduction
 
-**BlaZe™** is an advanced Discord music bot source-code project developed using Node.js and Discord.js v14.
+A modern audio platform built around the Discord ecosystem, combining structured application architecture with dedicated audio-processing infrastructure.
 
-The project combines modern Discord API integration with the Kazagumo and Shoukaku audio ecosystem to provide a structured music playback environment powered by Lavalink.
+The project uses Node.js and Discord.js v14 alongside Kazagumo, Shoukaku and Lavalink to manage music playback, player sessions, voice communication and audio processing.
 
-BlaZe is designed around modularity, maintainability, reliability and extensibility. Its architecture separates music commands, player management, event processing, configuration and persistent data.
+The architecture is designed around independent components, maintainable code and extensible functionality.
 
-The goal is to provide a music bot foundation that developers can customize, extend and deploy for their own Discord communities.
+Its primary focus is delivering a consistent playback experience while maintaining a clean foundation for future development.
+
+<div align="center">
+
+<img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=1400&q=90" width="90%" alt="Audio production studio">
+
+</div>
 
 # Project Overview
 
 | Property | Information |
-|---|---|
-| Project Name | BlaZe™ |
-| Project Type | Discord Music Bot |
+|:---|:---|
+| Project Category | Discord Application |
 | Runtime | Node.js |
-| Minimum Node.js | 20+ |
+| Minimum Runtime | Node.js 20+ |
+| Primary Language | JavaScript |
 | Discord Library | Discord.js v14 |
 | Music Manager | Kazagumo |
-| Audio Library | Shoukaku |
+| Audio Manager | Shoukaku |
 | Audio Server | Lavalink v4 |
 | Database | MongoDB |
-| Primary Language | JavaScript |
-| Type Support | TypeScript |
+| Repository | fraudelis/blaze |
 | License | MIT |
 
----
+# Core Infrastructure
 
-# Features
+The application is organized around several independent systems.
 
-BlaZe includes a collection of music-related systems designed to provide a complete listening experience.
+### Application Layer
 
-## Music Playback
+- Discord API communication.
+- Command registration.
+- Interaction handling.
+- Permission validation.
+- Guild configuration.
 
-- Music search and playback.
-- Track selection.
-- Audio streaming through Lavalink.
-- Automatic track progression.
-- Player state management.
-- Voice connection handling.
-- Player event management.
-- Lavalink node communication.
+### Music Layer
 
-## Queue Management
+- Track searching.
+- Track loading.
+- Player initialization.
+- Queue processing.
+- Playback management.
 
-- Add tracks to the queue.
-- Display queued tracks.
-- Skip current tracks.
-- Clear the queue.
-- Shuffle queued tracks.
-- Manage playback order.
-- Queue state management.
+### Audio Layer
 
-## Player Controls
+- Lavalink communication.
+- Node management.
+- Voice connectivity.
+- Audio processing.
+- Player synchronization.
 
-- Play and pause.
-- Resume playback.
-- Skip tracks.
-- Stop playback.
-- Volume management.
-- Previous track support, if implemented.
-- Track information.
-- Playback status.
+### Storage Layer
 
-## Personal Music Features
-
-- Favourite tracks.
-- Personal playlists.
-- Playlist management.
-- Persistent user preferences.
-- Saved music collections.
-
-## Audio Processing
-
-- Audio filters.
-- Lavalink player integration.
-- Audio session management.
-- Node connection monitoring.
-- Player recovery handling.
-
-## Server Configuration
-
-- Custom command prefix.
-- Music channel configuration.
-- Guild-specific settings.
+- MongoDB connectivity.
 - Persistent configuration.
-- Configurable bot behaviour.
-
-## Developer Infrastructure
-
-- Modular command handlers.
-- Event-driven architecture.
-- Hybrid sharding support.
-- Centralized configuration.
-- Database integration.
-- Reconnection handling.
-- Structured diagnostics.
-
----
-
-# Music System
-
-The music system is the primary component of BlaZe.
-
-It uses Kazagumo as the music manager and Shoukaku as the communication layer for Lavalink.
-
-The architecture separates Discord command processing from the audio playback infrastructure.
-
-## Music Processing Flow
-
-```text
-       Discord User
-             |
-             v
-       Discord Server
-             |
-             v
-       Discord.js v14
-             |
-             v
-       Music Commands
-             |
-             v
-        Kazagumo
-             |
-             v
-        Shoukaku
-             |
-             v
-       Lavalink v4
-             |
-             v
-      Audio Processing
-             |
-             v
-      Discord Voice
-```
-
-## Playback Lifecycle
-
-1. A user requests a track.
-2. The bot validates the request.
-3. The music command handler processes the input.
-4. Kazagumo manages the player.
-5. Shoukaku communicates with Lavalink.
-6. Lavalink processes the audio.
-7. Audio is delivered through the Discord voice connection.
-
----
-
-# Player Controls
-
-BlaZe provides a structured player-control system.
-
-The player manages the current track, playback state, volume and queue.
-
-| Control | Description |
-|---|---|
-| Play | Start music playback |
-| Pause | Pause the current track |
-| Resume | Continue playback |
-| Skip | Move to the next track |
-| Stop | Stop the player |
-| Volume | Adjust playback volume |
-| Previous | Return to the previous track, if supported |
-| Filters | Apply supported audio filters |
-
-Player controls should validate the active voice session and user permissions before executing actions.
-
-# Queue Management
-
-The queue system manages tracks waiting for playback.
-
-Its responsibilities include:
-
-- Track insertion.
-- Track removal.
-- Queue ordering.
-- Queue display.
-- Shuffle functionality.
-- Queue clearing.
-- Current-track tracking.
-- Automatic next-track handling.
-
-## Queue Processing
-
-```text
-New Track Request
-       |
-       v
-Track Validation
-       |
-       v
-Queue Processing
-       |
-       v
-Player Availability
-       |
-       v
-Playback Execution
-       |
-       v
-Track Completion
-       |
-       v
-Next Track
-```
-
-# Playlist System
-
-The playlist system provides a way to organize music collections.
-
-Playlist operations may include:
-
-- Creating playlists.
-- Viewing saved playlists.
-- Adding tracks.
-- Removing tracks.
-- Managing playlist information.
-- Loading saved collections.
-
-Playlist data can be stored persistently using MongoDB.
-
-# Favourite System
-
-BlaZe supports a personal favourite-track concept.
-
-Favourite management can include:
-
-- Saving tracks.
-- Viewing favourite collections.
-- Removing saved tracks.
-- Retrieving track information.
-- Persistent user-specific storage.
-
-Each user's saved collection should be isolated from other users.
-
-# Audio Filters
-
-The audio-filter system provides additional control over music playback.
-
-Filters are processed through the configured Lavalink infrastructure.
-
-Examples of commonly supported audio-processing effects include:
-
-- Bass boost.
-- Nightcore.
-- Vaporwave.
-- Karaoke.
-- Tremolo.
-- Vibrato.
-- Rotation.
-- Equalizer.
-- Low-pass.
-- Timescale.
-- Channel mixing.
-
-Filter availability depends on the Lavalink version and installed plugins.
+- User preferences.
+- Playlist records.
+- Favourite collections.
 
 ---
 
 # Music Architecture
 
-BlaZe uses a modular music architecture designed to separate playback operations from Discord command execution.
+The music infrastructure separates Discord interactions from the audio-processing environment.
 
-## Architecture Components
+Kazagumo manages music players, Shoukaku provides communication with Lavalink, and Lavalink handles the audio-processing workload.
 
-| Component | Responsibility |
-|---|---|
-| Discord.js | Discord API communication |
-| Command Handler | Processes user commands |
-| Kazagumo | Manages music players |
-| Shoukaku | Handles Lavalink communication |
-| Lavalink | Processes audio streams |
-| MongoDB | Stores persistent information |
-| Event Handler | Processes application events |
+<div align="center">
 
-## Component Interaction
+<img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=1400&q=85" width="90%" alt="Professional recording studio">
 
-```text
-+--------------------------+
-|       Discord API        |
-+------------+-------------+
-             |
-             v
-+--------------------------+
-|      Discord.js v14      |
-+------------+-------------+
-             |
-             v
-+--------------------------+
-|      Command Handler     |
-+------------+-------------+
-             |
-             v
-+--------------------------+
-|       Kazagumo           |
-+------------+-------------+
-             |
-             v
-+--------------------------+
-|        Shoukaku          |
-+------------+-------------+
-             |
-             v
-+--------------------------+
-|        Lavalink v4       |
-+--------------------------+
+</div>
+
+## System Architecture
+
+```mermaid
+flowchart TD
+    A["Discord User"] --> B["Discord API"]
+    B --> C["Discord.js v14"]
+    C --> D["Command Handler"]
+    D --> E["Music Manager"]
+    E --> F["Kazagumo"]
+    F --> G["Shoukaku"]
+    G --> H["Lavalink v4"]
+    H --> I["Audio Processing"]
+    I --> J["Discord Voice"]
+
+    D --> K["Database Layer"]
+    K --> L["MongoDB"]
+
+    F --> M["Player Events"]
+    M --> D
 ```
 
-## Design Principles
+## Architecture Responsibilities
 
-**Modularity**
+| Component | Responsibility |
+|:---|:---|
+| Discord.js | Discord communication |
+| Command Handler | Interaction processing |
+| Kazagumo | Player management |
+| Shoukaku | Lavalink communication |
+| Lavalink | Audio processing |
+| MongoDB | Persistent storage |
+| Event Handler | Event processing |
 
-Keep commands, events, database operations and player logic separated.
+---
 
-**Maintainability**
+# Playback Engine
 
-Use consistent naming conventions and reusable functions.
+The playback engine manages track requests and player sessions.
 
-**Reliability**
+### Playback Capabilities
 
-Handle connection interruptions and unexpected player states.
+- Track searching.
+- Track loading.
+- Audio streaming.
+- Automatic progression.
+- Player initialization.
+- Voice connection management.
+- Playback state tracking.
+- Track-end event processing.
+- Lavalink node communication.
 
-**Scalability**
+### Playback Workflow
 
-Keep components independent to make future development easier.
+```mermaid
+flowchart TD
+    A["Track Request"] --> B["Input Validation"]
+    B --> C["Track Search"]
+    C --> D["Track Resolution"]
+    D --> E["Player Initialization"]
+    E --> F["Queue Processing"]
+    F --> G["Playback"]
+    G --> H["Track Completion"]
+    H --> I["Next Track"]
+```
 
-**Security**
+---
 
-Protect credentials and validate access to administrative functionality.
+# Queue Management
+
+The queue system organizes upcoming tracks and maintains playback order.
+
+### Queue Operations
+
+| Operation | Description |
+|:---|:---|
+| Add | Add a track |
+| Remove | Remove a selected track |
+| Clear | Clear upcoming tracks |
+| Shuffle | Randomize queue order |
+| View | Display queued tracks |
+| Skip | Move to the next track |
+| Position | Manage track order |
+
+Queue operations should validate the current player session before making modifications.
+
+---
+
+# Interactive Controls
+
+The player-control system provides access to playback operations.
+
+| Control | Function |
+|:---|:---|
+| Play | Start playback |
+| Pause | Pause playback |
+| Resume | Continue playback |
+| Skip | Skip the current track |
+| Stop | Stop the player |
+| Volume | Change playback volume |
+| Previous | Return to the previous track, if implemented |
+| Filters | Apply supported audio effects |
+| Queue | View upcoming tracks |
+
+<div align="center">
+
+<img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=1400&q=85" width="90%" alt="Concert atmosphere">
+
+</div>
+
+---
+
+# Audio Processing
+
+Audio processing is handled through the configured Lavalink infrastructure.
+
+### Supported Filter Concepts
+
+| Filter | Purpose |
+|:---|:---|
+| Bass Boost | Low-frequency enhancement |
+| Nightcore | Speed and pitch modification |
+| Vaporwave | Slower playback effect |
+| Karaoke | Vocal reduction |
+| Tremolo | Volume modulation |
+| Vibrato | Pitch modulation |
+| Rotation | Stereo rotation |
+| Equalizer | Frequency adjustment |
+| Low-pass | Frequency filtering |
+| Timescale | Playback speed adjustment |
+
+Filter availability depends on the Lavalink version and installed plugins.
+
+---
+
+# Personal Collections
+
+Personal music collections can be maintained through persistent user-specific records.
+
+### Favourite Tracks
+
+- Save favourite tracks.
+- Retrieve saved tracks.
+- Remove favourites.
+- Maintain individual collections.
+- Store track metadata.
+
+### Playlist Management
+
+- Create playlists.
+- Rename playlists.
+- Add tracks.
+- Remove tracks.
+- View saved playlists.
+- Load saved collections.
+
+---
+
+# Database Infrastructure
+
+MongoDB can provide persistent storage for application data.
+
+### Suggested Collections
+
+| Collection | Purpose |
+|:---|:---|
+| Guilds | Server configuration |
+| Users | User preferences |
+| Playlists | Personal playlists |
+| Favourites | Saved tracks |
+| Settings | Application settings |
+
+Database operations should use validated schemas and appropriate error handling.
 
 ---
 
 # Technology Stack
 
-BlaZe uses a collection of JavaScript ecosystem technologies.
+<div align="center">
 
-| Technology | Purpose |
-|---|---|
-| Node.js 20+ | Application runtime |
-| JavaScript | Main runtime development |
-| TypeScript | Type checking and maintenance |
-| Discord.js v14 | Discord API integration |
-| Kazagumo | Music player management |
-| Shoukaku | Lavalink communication |
-| Lavalink v4 | Audio processing |
-| MongoDB | Persistent storage |
-| Python | Offline diagnostics |
+<img src="https://skillicons.dev/icons?i=nodejs,js,mongodb,git,github,vscode&theme=dark" width="100%" alt="Development technologies">
 
-## Why These Technologies?
+</div>
 
-### Node.js
-
-Provides the asynchronous runtime required for Discord gateway connections, command execution and application services.
-
-### Discord.js
-
-Provides the Discord API interface for guilds, members, channels, messages, interactions and voice integrations.
-
-### Kazagumo
-
-Provides an abstraction for managing music players and tracks.
-
-### Shoukaku
-
-Handles communication between the application and Lavalink nodes.
-
-### Lavalink
-
-Processes audio independently from the main Discord bot process.
-
-### MongoDB
-
-Provides persistent storage for application data and user preferences.
+| Technology | Usage |
+|:---|:---|
+| Node.js | Application runtime |
+| JavaScript | Main programming language |
+| Discord.js | Discord integration |
+| Kazagumo | Music management |
+| Shoukaku | Audio communication |
+| Lavalink | Audio processing |
+| MongoDB | Database |
+| Git | Version control |
+| GitHub | Source management |
 
 ---
 
 # Requirements
 
-Before installing BlaZe, prepare the following:
+Before installing, ensure the following dependencies are available.
 
 - Node.js 20 or newer.
 - npm package manager.
-- Git.
-- Discord Developer Portal application.
+- Discord application.
 - Discord bot token.
-- MongoDB database.
 - Lavalink v4 server.
-- Required Discord bot permissions.
-
-## Recommended Environment
-
-| Resource | Recommendation |
-|---|---|
-| Runtime | Node.js 20+ |
-| Memory | 512 MB minimum for testing |
-| Storage | 1 GB or more |
-| Database | MongoDB |
-| Audio Server | Lavalink v4 |
-| Network | Stable internet connection |
-
-Actual resource requirements depend on the number of guilds, active players and hosting configuration.
+- MongoDB connection, if database features are enabled.
 
 ---
 
 # Installation
 
-Follow the instructions below to install BlaZe locally.
-
-## Step 1 — Clone Repository
+### 01. Clone the repository
 
 ```bash
-git clone https://github.com/USERNAME/BlaZe.git
+git clone https://github.com/fraudelis/blaze.git
 ```
 
-## Step 2 — Open Project Directory
+### 02. Enter the directory
 
 ```bash
-cd BlaZe
+cd blaze
 ```
 
-## Step 3 — Install Dependencies
+### 03. Install dependencies
 
 ```bash
 npm install
 ```
 
-## Step 4 — Configure Environment
+### 04. Configure environment variables
 
-Create a `.env` file:
+Create a `.env` file in the project root.
 
-```bash
-cp .env.example .env
+```env
+TOKEN=YOUR_DISCORD_BOT_TOKEN
+CLIENT_ID=YOUR_DISCORD_APPLICATION_ID
+
+MONGO_URI=YOUR_MONGODB_URI
+
+LAVALINK_HOST=localhost
+LAVALINK_PORT=2333
+LAVALINK_PASSWORD=YOUR_LAVALINK_PASSWORD
 ```
 
-Open the file and configure your credentials.
-
-## Step 5 — Start Application
+### 05. Start the application
 
 ```bash
 npm start
 ```
 
-## Development Mode
+If the project does not have a start script:
 
 ```bash
-npm run dev
+node index.js
 ```
+
+Use the actual entry-point filename configured in your project.
 
 ---
 
 # Configuration
 
-BlaZe uses environment variables to configure external services and application credentials.
+Configuration should be maintained separately from application logic.
 
-## Environment Configuration
+Recommended configuration categories:
 
-Create a `.env` file in the project root.
+- Discord credentials.
+- Lavalink connection.
+- Database connection.
+- Application settings.
+- Logging configuration.
+- Command settings.
 
-```env
-# Discord Application
-DISCORD_TOKEN=
-CLIENT_ID=
-CLIENT_SECRET=
-
-# MongoDB
-MONGODB_URI=
-
-# Lavalink
-LAVALINK_HOST=
-LAVALINK_PORT=2333
-LAVALINK_PASSWORD=
-LAVALINK_SECURE=false
-
-# Application
-NODE_ENV=production
-DEFAULT_PREFIX=!
-```
-
-The variable names above are a recommended example. Match them to the actual configuration keys used by your source code.
-
-## Configuration Reference
-
-| Variable | Description |
-|---|---|
-| DISCORD_TOKEN | Bot authentication token |
-| CLIENT_ID | Discord application ID |
-| CLIENT_SECRET | Application secret, if required |
-| MONGODB_URI | MongoDB connection URI |
-| LAVALINK_HOST | Lavalink server hostname |
-| LAVALINK_PORT | Lavalink server port |
-| LAVALINK_PASSWORD | Lavalink authentication |
-| LAVALINK_SECURE | Enable secure Lavalink connection |
-| NODE_ENV | Runtime environment |
-| DEFAULT_PREFIX | Default command prefix |
+Never commit private credentials to a public repository.
 
 ---
 
-# Lavalink Setup
+# Environment Variables
 
-Lavalink is responsible for audio processing in BlaZe.
+| Variable | Description |
+|:---|:---|
+| TOKEN | Discord bot token |
+| CLIENT_ID | Discord application ID |
+| MONGO_URI | MongoDB connection URI |
+| LAVALINK_HOST | Lavalink hostname |
+| LAVALINK_PORT | Lavalink server port |
+| LAVALINK_PASSWORD | Lavalink authentication password |
 
-A Lavalink v4 node must be available before music playback can work.
+These are example variable names. Match them to the actual implementation.
 
-## Lavalink Requirements
+---
 
-- Lavalink v4.
-- Java runtime compatible with your Lavalink release.
-- Network accessibility.
-- Valid authentication password.
-- Correct host and port configuration.
+# Lavalink Configuration
 
-## Example Application Configuration
+Example `application.yml`:
 
 ```yaml
 server:
@@ -582,7 +475,7 @@ server:
 
 lavalink:
   server:
-    password: "CHANGE_THIS_PASSWORD"
+    password: "YOUR_SECURE_PASSWORD"
     sources:
       youtube: false
       bandcamp: true
@@ -593,562 +486,274 @@ lavalink:
       local: false
 ```
 
-This is an illustrative configuration. Source availability depends on the Lavalink version and installed plugins.
-
-Never expose a public Lavalink endpoint without appropriate access controls.
-
----
-
-# Database Configuration
-
-MongoDB is used for persistent application data.
-
-## Database Responsibilities
-
-- Guild configuration.
-- Custom prefixes.
-- User favourites.
-- Personal playlists.
-- Music preferences.
-- Application settings.
-
-## Database Best Practices
-
-1. Validate database connections.
-2. Reuse database clients.
-3. Use appropriate indexes.
-4. Validate incoming data.
-5. Handle connection interruptions.
-6. Avoid unnecessary database requests.
-7. Keep credentials outside source files.
+Configure the appropriate audio sources and plugins for your deployment.
 
 ---
 
 # Project Structure
 
-The following structure is a recommended organization for a maintainable BlaZe repository.
+A suggested modular organization:
 
 ```text
-BlaZe/
+blaze/
 │
 ├── src/
-│   │
 │   ├── commands/
 │   │   ├── music/
-│   │   │   ├── play.js
-│   │   │   ├── pause.js
-│   │   │   ├── resume.js
-│   │   │   ├── skip.js
-│   │   │   ├── stop.js
-│   │   │   ├── volume.js
-│   │   │   ├── queue.js
-│   │   │   ├── shuffle.js
-│   │   │   ├── filters.js
-│   │   │   └── loop.js
-│   │   │
-│   │   ├── playlist/
-│   │   ├── favourites/
-│   │   ├── utility/
-│   │   └── configuration/
+│   │   └── utility/
 │   │
 │   ├── events/
 │   │   ├── client/
-│   │   ├── guild/
-│   │   ├── interaction/
-│   │   └── music/
+│   │   ├── music/
+│   │   └── player/
 │   │
 │   ├── handlers/
-│   │   ├── commandHandler.js
-│   │   ├── eventHandler.js
-│   │   └── errorHandler.js
-│   │
-│   ├── music/
-│   │   ├── manager.js
-│   │   ├── player.js
-│   │   ├── queue.js
-│   │   └── filters.js
 │   │
 │   ├── database/
-│   │   ├── models/
-│   │   ├── schemas/
-│   │   └── connection.js
 │   │
-│   ├── config/
-│   │   └── index.js
+│   ├── music/
 │   │
-│   ├── utils/
-│   │   ├── logger.js
-│   │   ├── permissions.js
-│   │   ├── helpers.js
-│   │   └── validators.js
+│   ├── structures/
 │   │
-│   └── index.js
+│   └── utils/
 │
-├── scripts/
-├── tests/
-├── docs/
+├── config/
+│
+├── models/
 │
 ├── .env.example
 ├── .gitignore
-├── LICENSE
 ├── package.json
 ├── package-lock.json
-└── README.md
+└── index.js
 ```
 
----
-
-# Command System
-
-BlaZe organizes commands into separate categories.
-
-## Music Commands
-
-| Command | Description |
-|---|---|
-| play | Play or search for music |
-| pause | Pause current playback |
-| resume | Resume playback |
-| skip | Skip current track |
-| stop | Stop music playback |
-| queue | Display the music queue |
-| volume | Adjust player volume |
-| shuffle | Shuffle the queue |
-| loop | Configure repeat mode |
-| filters | Manage audio filters |
-
-## Playlist Commands
-
-| Command | Description |
-|---|---|
-| playlist | Manage playlists |
-| favourites | Manage favourite tracks |
-
-## Utility Commands
-
-| Command | Description |
-|---|---|
-| ping | Display bot latency |
-| uptime | Display application uptime |
-| stats | Display bot statistics |
-| health | Check application health |
-| settings | View configuration |
-| setprefix | Configure command prefix |
-| support | Display support information |
-
-Exact command names and availability should match the registered commands in the project.
+The actual directory structure may differ depending on the implementation.
 
 ---
 
-# Event Handling
+# Command Architecture
 
-BlaZe uses an event-driven architecture to process Discord and music-related events.
+The command handler should provide a consistent interaction-processing workflow.
 
-## Discord Events
+Recommended responsibilities:
+
+- Command registration.
+- Input validation.
+- Permission verification.
+- Voice-channel validation.
+- Player availability checks.
+- Error responses.
+- Command execution.
+
+# Event Management
+
+Event handlers should process Discord and music-related events independently.
 
 Examples include:
 
 - Client ready.
-- Interaction create.
-- Guild create.
-- Guild delete.
-- Voice state update.
-- Message create.
-
-## Music Events
-
-Examples include:
-
-- Player start.
-- Player end.
-- Player pause.
-- Player resume.
-- Player exception.
-- Player stuck.
-- Node connect.
-- Node disconnect.
-- Node error.
-
-Event handlers should remain lightweight and delegate complex operations to appropriate modules.
-
----
+- Interaction creation.
+- Track start.
+- Track end.
+- Track exception.
+- Player creation.
+- Player destruction.
+- Lavalink node connection.
+- Lavalink node disconnection.
 
 # Player Lifecycle
 
-A music player generally passes through several states.
-
-```text
-      Idle
-       |
-       v
-   Connecting
-       |
-       v
-     Ready
-       |
-       v
-    Playing
-       |
-       v
-     Paused
-       |
-       v
-    Playing
-       |
-       v
-     Ending
-       |
-       v
-      Idle
+```mermaid
+stateDiagram-v2
+    [*] --> Idle
+    Idle --> Connecting
+    Connecting --> Ready
+    Ready --> Playing
+    Playing --> Paused
+    Paused --> Playing
+    Playing --> Playing: Next Track
+    Playing --> Idle: Queue Empty
+    Ready --> Destroyed
+    Idle --> Destroyed
+    Destroyed --> [*]
 ```
-
-The implementation should handle unexpected disconnects, unavailable nodes and incomplete playback sessions.
-
----
 
 # Error Handling
 
-Reliable error handling helps prevent unexpected application interruptions.
+Reliable error handling is essential for maintaining application stability.
 
-BlaZe should account for:
+Recommended practices:
 
-- Discord API errors.
-- Invalid command arguments.
-- Missing permissions.
-- Database connection failures.
-- Lavalink disconnections.
-- Player exceptions.
-- Voice connection failures.
-- Invalid track requests.
-- Unexpected interaction errors.
+- Validate incoming interactions.
+- Handle unavailable tracks.
+- Monitor Lavalink connectivity.
+- Handle voice connection interruptions.
+- Catch asynchronous errors.
+- Log unexpected exceptions.
+- Avoid exposing private credentials.
+- Provide useful error messages.
 
-## Logging Recommendations
+# Performance
 
-Use structured logging to record:
+Performance considerations include:
 
-- Application startup.
-- Application shutdown.
-- Database status.
-- Music node status.
-- Command execution errors.
-- Player lifecycle events.
-- Unexpected exceptions.
-
-Do not include authentication credentials in logs.
-
----
-
-# Performance Optimization
-
-The following practices can help maintain consistent performance.
-
-- Reuse database connections.
-- Avoid blocking operations.
-- Use asynchronous execution.
-- Limit unnecessary API requests.
-- Monitor active music players.
-- Clean up inactive resources.
-- Avoid duplicate event listeners.
-- Handle reconnection attempts carefully.
-- Monitor memory and CPU consumption.
-
-## Scalability
-
-For larger deployments, consider:
-
-- Hybrid sharding.
-- Multiple Lavalink nodes.
-- Centralized database connections.
-- Distributed application monitoring.
-- Resource-aware player management.
-- Controlled reconnection strategies.
-
----
+- Efficient asynchronous execution.
+- Reusable utility functions.
+- Controlled database queries.
+- Proper player cleanup.
+- Connection monitoring.
+- Optimized event listeners.
+- Resource-aware deployment.
 
 # Security
 
-Security should be considered throughout development and deployment.
+Security practices should include:
 
-## Credential Protection
-
-Never commit:
-
-- Discord bot tokens.
-- MongoDB credentials.
-- Lavalink passwords.
-- API secrets.
-- Webhook URLs.
-- Private application keys.
-
-## Permission Validation
-
-Sensitive operations should verify:
-
-- User permissions.
-- Bot permissions.
-- Guild context.
-- Channel access.
-- Voice connection permissions.
-
-## Git Ignore
-
-Recommended `.gitignore`:
-
-```gitignore
-.env
-.env.*
-!.env.example
-
-node_modules/
-dist/
-build/
-
-coverage/
-logs/
-*.log
-
-.DS_Store
-Thumbs.db
-
-*.tsbuildinfo
-```
+- Environment-based credentials.
+- Restricted configuration access.
+- Permission validation.
+- Input validation.
+- Secure database connections.
+- Protected deployment secrets.
+- Regular dependency updates.
 
 ---
 
 # Development
 
-Developers can customize BlaZe according to their requirements.
-
-## Development Commands
+### Local Development
 
 ```bash
 npm install
-npm run dev
-npm run typecheck
-npm run check
-npm run python:check
-npm test
+npm start
 ```
 
-These scripts must exist in `package.json` before they can be used.
+### Dependency Updates
 
-## Coding Guidelines
+```bash
+npm outdated
+```
 
-- Use consistent naming conventions.
-- Keep modules independent.
-- Write readable functions.
-- Validate command input.
-- Handle rejected promises.
-- Avoid unnecessary dependencies.
-- Document significant changes.
-- Keep configuration centralized.
+### Dependency Installation
 
----
+```bash
+npm install
+```
+
+### Git Status
+
+```bash
+git status
+```
+
+### Commit Changes
+
+```bash
+git add .
+git commit -m "Update application"
+```
 
 # Testing
 
-Before releasing changes, test the relevant functionality.
+Before deploying changes, verify:
 
-## Recommended Test Areas
-
-| Area | Test |
-|---|---|
-| Commands | Command execution |
-| Music | Track playback |
-| Queue | Queue operations |
-| Player | Playback state |
-| Database | Data persistence |
-| Lavalink | Node connectivity |
-| Events | Event processing |
-| Security | Permission validation |
-| Configuration | Settings persistence |
-| Recovery | Reconnection handling |
-
-## Validation
-
-```bash
-npm run check
-npm run typecheck
-npm run python:check
-npm test
-```
-
-Only report tests as passed after actually executing them.
-
----
+- Application startup.
+- Discord authentication.
+- Command registration.
+- Lavalink connectivity.
+- Player initialization.
+- Queue processing.
+- Playback controls.
+- Database connectivity.
+- Error handling.
 
 # Deployment
 
-BlaZe can run in supported Node.js hosting environments.
+The application can be deployed on a compatible Node.js hosting environment.
 
-## Supported Deployment Types
+Deployment checklist:
 
-- Linux VPS.
-- Docker environments.
-- Node.js application hosting.
-- Cloud hosting platforms.
-- Development environments.
-
-## Production Checklist
-
-- [ ] Node.js version verified.
-- [ ] Dependencies installed.
-- [ ] Environment variables configured.
-- [ ] Discord token validated.
-- [ ] Database connection tested.
-- [ ] Lavalink node connected.
-- [ ] Bot permissions configured.
-- [ ] Music playback tested.
-- [ ] Logging configured.
-- [ ] Restart behaviour tested.
-
-## Production Recommendations
-
-Use a process manager or hosting platform that supports automatic restarts.
-
-Keep the Discord bot and Lavalink services monitored independently.
+- Configure the Node.js runtime.
+- Install project dependencies.
+- Set environment variables.
+- Configure Lavalink connectivity.
+- Configure MongoDB access.
+- Start the application.
+- Monitor application logs.
+- Verify Discord connectivity.
 
 ---
 
 # Troubleshooting
 
-## Bot Does Not Start
-
-Check:
-
-- Node.js version.
-- Installed dependencies.
-- Environment variables.
-- Startup command.
-- Application logs.
-
-## Bot Cannot Connect to Discord
-
-Check:
-
-- Bot token validity.
-- Gateway connectivity.
-- Application configuration.
-- Hosting network access.
-
-## Music Playback Is Unavailable
-
-Check:
-
-- Lavalink availability.
-- Node hostname and port.
-- Authentication password.
-- Installed Lavalink plugins.
-- Discord voice permissions.
-
-## Queue Is Not Working
-
-Check:
-
-- Player initialization.
-- Queue state.
-- Track loading.
-- Player event handlers.
-- Lavalink connectivity.
-
-## Database Connection Problems
-
-Check:
-
-- MongoDB URI.
-- Database authentication.
-- Network accessibility.
-- Database availability.
-
-## Audio Interruptions
-
-Check:
-
-- Lavalink node health.
-- Network stability.
-- Hosting resources.
-- Player exception logs.
+| Issue | Recommended Check |
+|:---|:---|
+| Application crashes | Review startup logs |
+| Invalid token | Verify bot credentials |
+| Lavalink connection fails | Check host and port |
+| Authentication fails | Verify Lavalink password |
+| No search results | Check configured sources |
+| Database unavailable | Verify MongoDB URI |
+| Voice connection fails | Check voice permissions |
+| Playback stops | Review player events |
+| Commands unavailable | Verify command registration |
 
 ---
 
 # Contribution Guidelines
 
-Contributions are welcome from developers interested in improving the project.
-
-## How to Contribute
+Contributions are welcome.
 
 1. Fork the repository.
-2. Create a feature branch.
+2. Create a development branch.
 3. Make your changes.
 4. Test your implementation.
-5. Update documentation.
-6. Commit your changes.
-7. Submit a pull request.
+5. Commit your changes.
+6. Submit a pull request.
 
-## Contribution Standards
-
-- Follow the existing project structure.
-- Avoid unnecessary modifications.
-- Write maintainable code.
-- Include relevant documentation.
-- Do not expose private credentials.
-- Test changes before submission.
-
-## Reporting Issues
-
-When reporting an issue, provide:
-
-- A clear issue title.
-- Steps to reproduce.
-- Expected behaviour.
-- Actual behaviour.
-- Relevant error logs.
-- Environment information.
-
-Remove tokens and private credentials before sharing logs.
-
----
-
-# Roadmap
-
-The following is a possible development roadmap, not a statement that these features are already implemented.
-
-- [ ] Improve music player reliability.
-- [ ] Expand playlist management.
-- [ ] Improve queue controls.
-- [ ] Enhance audio-filter management.
-- [ ] Improve database efficiency.
-- [ ] Expand diagnostic tools.
-- [ ] Improve Lavalink recovery.
-- [ ] Expand documentation.
-- [ ] Improve application monitoring.
-- [ ] Optimize resource utilization.
-
----
+Please maintain consistent formatting, readable code and proper error handling.
 
 # License
 
-This project is distributed under the **MIT License**.
+This project is distributed under the MIT License.
 
-You are permitted to use, modify and distribute this project according to the terms of the license.
-
-See the [LICENSE](LICENSE) file for the complete license text.
-
----
-
-# Acknowledgements
-
-BlaZe is built with the help of the following open-source technologies and communities:
-
-- [Node.js](https://nodejs.org/)
-- [Discord.js](https://discord.js.org/)
-- [Kazagumo](https://github.com/Tomato6966/Kazagumo)
-- [Shoukaku](https://github.com/shipgirlproject/Shoukaku)
-- [Lavalink](https://lavalink.dev/)
-- [MongoDB](https://www.mongodb.com/)
-
-Special thanks to the developers and contributors who maintain the open-source ecosystem that makes projects like BlaZe possible.
+Refer to the `LICENSE` file for complete licensing information.
 
 ---
 
 <div align="center">
+
+<img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=1800&q=90" width="100%" alt="Live music performance">
+
+<br><br>
+
+<img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=700&size=24&duration=3000&pause=1000&color=9B6DFF&center=true&vCenter=true&width=650&lines=BUILT+WITH+PRECISION;POWERED+BY+TECHNOLOGY;ENGINEERED+TO+PERFORM" alt="Animated footer">
+
+<br><br>
+
+<a href="https://github.com/fraudelis/blaze">
+<img src="https://img.shields.io/badge/EXPLORE-REPOSITORY-8B5CF6?style=for-the-badge&logo=github&logoColor=white">
+</a>
+
+<br><br>
+
+<img src="https://img.shields.io/github/stars/fraudelis/blaze?style=social">
+<img src="https://img.shields.io/github/forks/fraudelis/blaze?style=social">
+
+<br><br>
+
+**Designed for reliability. Built for extensibility.**
+
+<sub>© 2026 — Open-source development.</sub>
+
+</div>
+```
+
+---
+
+**Before publishing:**
+- Replace the example project structure with your actual folders.
+- Confirm the listed features are implemented before advertising them as available.
+- Keep the external image and animation links if you want them displayed on GitHub.
+- The GitHub statistics badges automatically use your repository data.
