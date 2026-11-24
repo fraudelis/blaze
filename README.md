@@ -355,6 +355,5 @@ Distributed under the MIT License. See the `LICENSE` file for details.
 
 <br><br>
 
-<sub>© 2026 · Open-source development.</sub>
 
 </div>
